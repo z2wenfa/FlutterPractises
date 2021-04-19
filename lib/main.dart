@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practises/layout/CenterDemo.dart';
+
+import 'layout/ContainerDemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,8 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: CenterDemo(
-      ),
+      body: ContainerDemo(),
     );
   }
 }
