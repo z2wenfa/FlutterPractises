@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'basic/ImageDemo.dart';
+import 'package:flutter_practises/route/Page1.dart';
+import 'package:flutter_practises/route/Page2.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: MyHomePage(),
+        routes: <String, WidgetBuilder>{"page2": (_) => new Page2()});
   }
 }
 
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: ImageDemo(),
+      body: Page1(),
     );
   }
 }
