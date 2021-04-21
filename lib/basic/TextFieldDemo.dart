@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 //[onEditingComplete]:输入完成事件[Function()]
 //[onSubmitted]:提交事件[Function(String)]
 //[onChanged]:输入事件[Function(String)]
+//[obscureText]:是否显示输入内容[bool]
 
 //TextField行数和cursor
 //[minLines]:最小行数[int]
@@ -57,6 +58,7 @@ class _TextFieldState extends State<TextFieldDemo> {
           SizedBox(height: 10),
 
           TextField(
+            obscureText: false,
             controller: TextEditingController(),
             style: TextStyle(color: Colors.blue),
             onEditingComplete: () => print("onEditingComplete"),
