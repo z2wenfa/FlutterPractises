@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practises/route/Page2.dart';
 
 import 'Page3.dart';
 
@@ -23,7 +22,7 @@ class Page1State extends State<StatefulWidget> {
                 tooltip: "跳转并替换当前栈",
                 onPressed: () => {navigateAndReplace(context)}),
             FloatingActionButton(
-              tooltip: "动态跳转",
+                tooltip: "动态跳转",
                 onPressed: () => {navigateWithDynamic(context)})
           ],
         ),
@@ -41,9 +40,10 @@ class Page1State extends State<StatefulWidget> {
     Navigator.of(context).pushReplacementNamed("page2");
   }
 
-  //动态跳转
+  //动态跳转并打印返回带的参数
   void navigateWithDynamic(BuildContext context) {
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => Page3()));
+        .push(MaterialPageRoute(builder: (context) => Page3()))
+        .then((value) => {print("带回的参数$value")});
   }
 }
