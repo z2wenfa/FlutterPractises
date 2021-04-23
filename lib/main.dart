@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practises/route/Page2.dart';
 
-import 'basic/ListViewDemo.dart';
+import 'basic/FlexibleDemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListViewDemo(),
+      body: FlexibleDemo(),
     );
   }
 }

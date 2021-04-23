@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 //列表显示,可以通过builder、separated、custom等构造。有内边距、是否反向、滑动控制器等属性
+//构造方法主要是两种 ListView.builder创建没有separate的列表,ListView.separated构造具有separate的列表
+//[itemBuilder]:构造ViewHolder[Widget Function(BuildContext context, int index)]
+//[itemCount]:列表数量[int]
+//[separatorBuilder]:分隔符构造器[Widget Function(BuildContext context, int index)]]
 class ListViewDemo extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _ListViewDemoState();
