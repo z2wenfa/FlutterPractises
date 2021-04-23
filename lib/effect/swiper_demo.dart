@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-
 /**
  * Created by z2wenfa on 2021/4/23.
  * 轮播图使用Demo
  */
+
 
 ///[itemCount]:子项数量[int]
 ///[itemBuilder]:子项生成器
@@ -17,6 +17,7 @@ class SwiperDemo extends StatefulWidget {
 }
 
 class _SwiperDemoState extends State<SwiperDemo> {
+
   var _icons = [
     "assets/images/beauty.webp",
     "assets/images/beauty.webp",
