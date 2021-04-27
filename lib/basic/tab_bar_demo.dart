@@ -44,22 +44,43 @@ class _TabBarDemoState extends State<TabBarDemo>
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: TabBar(
-          controller: _tabController,
-          tabs: _titles.map((e) => Text(e)).toList(),
-          onTap: (value) {},
-          labelColor: Colors.blue,
-          labelStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
-          unselectedLabelColor: Colors.grey,
-          unselectedLabelStyle: TextStyle(fontSize: 16),
-          labelPadding: EdgeInsets.only(bottom: 10),
-          indicatorWeight: 3,
-          indicatorColor: Colors.blue,
-          indicatorPadding: EdgeInsets.symmetric(horizontal: 20),
+    return Container(
+      child: Column(children: [
+        Container(
+          height: 100,
         ),
-      ),
+        Positioned(
+          bottom: 200,
+          child: TabBar(
+            controller: _tabController,
+            tabs: _titles.map((e) => Text(e)).toList(),
+            onTap: (value) {},
+            labelColor: Colors.blue,
+            labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            unselectedLabelColor: Colors.grey,
+            unselectedLabelStyle: TextStyle(fontSize: 16),
+            labelPadding: EdgeInsets.only(bottom: 10),
+            indicatorWeight: 3,
+            indicatorColor: Colors.blue,
+            indicatorPadding: EdgeInsets.symmetric(horizontal: 20),
+          ),
+        ),
+        Container(
+          color: Colors.red,
+          height: 200,
+          width: MediaQuery.of(context).size.width,
+          child: TabBarView(
+            children: _titles
+                .map((title) => Container(
+                      height: 100,
+                      child: Text(title),
+                      color: Colors.blue,
+                    ))
+                .toList(),
+            controller: _tabController,
+          ),
+        )
+      ]),
     );
   }
 }
